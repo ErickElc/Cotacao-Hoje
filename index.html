@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CotaçãoHoje</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="Body">
+        <div class="Container-Header">
+            <h1 id="Title-Header">Cotação Hoje</h1>
+        </div>
+        <div class="ContainerMain"> 
+            <div class="Form">
+                <img src="./assets/Logoo.png" class="imagem"></img>
+                <form class="ContainerForm">
+                    <div class="EmCima">
+                        <select class="Selection" id="Selection1" onselect="EscolherMoeda()">
+                            <option id="Brasil" name="BRL" selected>BRL</option>
+                        </select>
+                        <input type="Number" class="inputs"  id="Input1" min="0" onkeypress="AtualizarValores()" ></input>
+                    </div>
+                    <div>
+                        <select class="Selection" id="Selection2" onselect="EscolherMoeda()" >
+                            <option id="Dolar" name="USD" selected >USD</option>
+                            <option id="Euro" name="Euro">EUR</option>
+                            <option id="CAD" name="CAD">CAD</option>
+                            <option id="libra" name="GBP">Libra</option>
+                            <option id="Russa" name="RUB">RUB</option>
+                            <option id="Australia"name="AUD">AUD</option>
+                        </select>
+                        <input type="Number"  min="0" id="Input2" class="inputs" onkeypress="AtualizarValores()" ></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/services/api.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
