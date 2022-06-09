@@ -8,7 +8,7 @@ let opcaoTexto2 = 0;
 function AtualizarValores(){
     let indexx =  0;
     const valorMoedas = fetch(url).then((res)=>{return res.json();})
-    .then(function MoedaValor(data){
+    .then((data)=>{
         let rates = [data.USDBRL.ask, data.EURBRL.ask, data.CADBRL.ask,data.GBPBRL.ask,data.RUBBRL.ask, data.AUDBRL.ask]; 
         indexx =  EscolherMoeda();            
         let valorSelecionado = rates[indexx];
